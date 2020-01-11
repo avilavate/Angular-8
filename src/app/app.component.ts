@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'pm-root',
-  template:'<pm-poducts></pm-poducts>',
+  template:'<div><h4>ACME Product Managment</h4><pm-poducts></pm-poducts></div>',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
