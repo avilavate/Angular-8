@@ -12,8 +12,11 @@ export class ProductListComponent implements OnInit{
  
     ngOnInit(): void {
        console.log("Product Component Init");
-       this.products=this.productService.getProducts();
-       this.filteredProducts=this.products;
+       this.productService.getProducts().subscribe(
+         products=>{this.products=products;  this.filteredProducts=this.products;},
+        error=>console.log(error)
+        )
+      
     }
 
     constructor(productService:ProductService){
