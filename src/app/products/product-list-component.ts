@@ -42,6 +42,9 @@ export class ProductListComponent implements OnInit{
         return result;
     }
 
+    updateHeader(message:string):void{
+      this.pageTitle=this.pageTitle+ " "+message;
+    }
    
 
     products:IProduct[]=[
