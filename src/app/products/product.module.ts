@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductListComponent } from './product-list-component';
-import { ConvertToSpacePipe } from '../shared/convert-to-space.pipe';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -15,7 +14,7 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     ProductListComponent,
     ProductDetailComponent,
-    ConvertToSpacePipe],
+    ],
   imports: [
     CommonModule,
     FormsModule,
