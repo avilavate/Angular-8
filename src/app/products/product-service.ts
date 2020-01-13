@@ -13,9 +13,8 @@ export class ProductService {
     constructor(private http: HttpClient) { }
 
     getProducts = (): Observable<IProduct[]> => {
-        console.log("getProducts called.")
         return this.http.get<IProduct[]>(this.serviceUrl).pipe(
-            tap(json=>JSON.stringify(json)),
+            tap(json=>console.log(`All: " ${JSON.stringify(json)}`)),
             catchError(this.handleError)
             );
     }

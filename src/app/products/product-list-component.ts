@@ -4,7 +4,6 @@ import { ProductService } from './product-service';
 
 
 @Component({
-  selector: 'pm-poducts',
   templateUrl:"./product-list.component.html",
   styleUrls:["./product-list.component.css"]
   })
@@ -44,7 +43,7 @@ export class ProductListComponent implements OnInit{
     performFilter(filterBy:string): IProduct[] {
         console.log("called");
         let result= this.products.filter(p=>{
-            return p.productName.includes(filterBy);
+            return (p.productName.toLowerCase()).includes(filterBy.toLowerCase());
         });
         console.log(result);
         return result;
