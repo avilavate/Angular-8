@@ -18,6 +18,11 @@ export class ProductService {
             catchError(this.handleError)
             );
     }
+    getProductById(id:number){
+        
+        return this.http.get<IProduct[]>(this.serviceUrl);
+    
+    }
     handleError(handleError: any): import("rxjs").OperatorFunction<IProduct[], any> {
         throw new Error(handleError.message);
     }
