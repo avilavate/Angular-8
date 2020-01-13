@@ -35,6 +35,7 @@ import { ProductRoutGuard } from './products/product-route-guard';
       {path:'**', redirectTo:'welcome'},
       ])
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

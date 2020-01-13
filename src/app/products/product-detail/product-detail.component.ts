@@ -13,7 +13,7 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(private route:ActivatedRoute, private productService:ProductService, private router:Router) {}
   product:IProduct;
-
+  pageTitle:string="Product Details";
   ngOnInit() {
     let id=+this.route.snapshot.paramMap.get('id');
     this.productService.getProductById(id).subscribe(products=>{
